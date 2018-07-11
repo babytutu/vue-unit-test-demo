@@ -1,22 +1,16 @@
 <template>
-  <span>{{ message }}{{ name }}</span>
+  <span>{{ message }}</span>
 </template>
 
 <script>
   export default {
-    props: {
-      name: {
-        type: String,
-        default: 'world'
-      }
-    },
     data () {
       return {
-        message: 'hello'
+        message: 'hello!'
       }
     },
     created () {
-      this.message = 'bye'
+      this.message = 'bye!'
     }
   }
 </script>

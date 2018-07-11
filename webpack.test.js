@@ -5,6 +5,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|vue)/,
+        include: path.resolve('src'),
+        use: ['istanbul-instrumenter-loader','babel-loader']
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader'
       },
