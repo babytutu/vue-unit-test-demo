@@ -9,8 +9,7 @@
 - jsdom & jsdom-global (for setting up DOM environment in tests)
 - webpack-node-externals (for excluding NPM deps from test bundle)
 - expect (for assertions)
-- nyc & istanbul-instrumenter-loader (for coverage)
-- canvas-prebuilt (for support canvas in tests)
+- nyc & babel-plugin-istanbul (for coverage)
 
 ## Usage
 

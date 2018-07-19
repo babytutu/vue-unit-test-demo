@@ -3,21 +3,21 @@
   "version": "1.0.0",
   "description": "vue-unit-test-demo",
   "scripts": {
-    "test": "mocha-webpack --webpack-config webpack.test.js --require test/setup.js test/*.spec.js",
-    "cover": "nyc --reporter=lcov --reporter=text npm run test"
+    "test": "NODE_ENV=test mocha-webpack --webpack-config webpack.test.js --require test/setup.js test/*.spec.js",
+    "cover": "NODE_ENV=test nyc --reporter=html --reporter=text npm run test"
   },
   "author": "babytutu",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-istanbul": "^4.1.6",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
-    "canvas-prebuilt": "^1.6.5-prerelease.1",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "expect": "^23.3.0",
     "file-loader": "^1.1.11",
-    "istanbul-instrumenter-loader": "^3.0.1",
     "jsdom": "^11.11.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.2.0",
@@ -26,7 +26,7 @@
     "vue": "^2.5.16",
     "vue-loader": "^14.2.3",
     "vue-template-compiler": "^2.5.16",
-    "webpack": "^4.15.1",
+    "webpack": "^4.16.1",
     "webpack-dev-server": "^3.1.4",
     "webpack-node-externals": "^1.7.2"
   },
@@ -36,5 +36,6 @@
     ],
     "instrument": false,
     "sourceMap": false
-  }
+  },
+  "dependencies": {}
 }
