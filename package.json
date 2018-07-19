@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "vue-unit-test-demo",
   "scripts": {
-    "test": "NODE_ENV=test mocha-webpack --webpack-config webpack.test.js --require test/setup.js test/*.spec.js",
-    "cover": "NODE_ENV=test nyc --reporter=html --reporter=text npm run test"
+    "test": "cross-env BABEL_ENV=test mocha-webpack --webpack-config webpack.test.js --require test/setup.js test/*.spec.js",
+    "cover": "cross-env BABEL_ENV=test nyc --reporter=html --reporter=text npm run test"
   },
   "author": "babytutu",
   "license": "ISC",
